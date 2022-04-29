@@ -6,12 +6,12 @@
 // console.log(myDogAge);
 let counterEle = document.getElementById("count-el");
 let count = 0;
-function increase() {
+const increase = () => {
   count += 1;
   counterEle.innerHTML = count;
 }
 
-function save() {
+const  save = () => {
   const entries = document.getElementById("prev-entries");
   entries.innerHTML += `<li>${count}</li>`;
 }
