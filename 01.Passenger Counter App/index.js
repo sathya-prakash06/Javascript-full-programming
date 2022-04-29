@@ -18,3 +18,14 @@ const save = () => {
   counterEle.textContent = 0;
   count = 0;
 };
+
+// practice
+
+// create two variables, firstName and lastName
+// concatenate the two variables and store in a new variable called fullName
+// console.log the fullName variable
+
+let firstName = "John";
+let lastName = "Doe";
+
+console.log(firstName + " " + lastName);
