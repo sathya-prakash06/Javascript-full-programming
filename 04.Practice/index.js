@@ -76,3 +76,111 @@ let user = {
     console.log("Hello");
   },
 };
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+// create a person object that contains three keys: name , age & country
+// use yourself as an eg to set the values for name, age and country
+
+// create a function , logData(), that uses the person object to craete a
+// string in the following format:
+// "Person's name is <name>, age is <age> and country is <country>"
+
+// call the logData() function and verify that the output is correct
+
+let person = {
+  name: "Sathya Prakash P",
+  age: 25,
+  country: "India",
+
+  logData: function () {
+    console.log(
+      `Person's name is ${this.name}, age is ${this.age} and country is ${this.country}`
+    );
+  },
+};
+person.logData();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// less than 6 yewars old - free
+// 6-17 years old - child discount
+// 18-26 years old - student discount
+// 27-66 years old - full price
+// 67+ years old - senior citizen discount
+
+// create a conditional statement (if/else if/ else) that logs out the discount
+// the passenger will get based upon the value of the age variable
+
+let ageOfPerson = Math.floor(Math.random() * 100);
+
+function calculateDiscount(ageOfPerson) {
+  let discount = "";
+  if (ageOfPerson < 6) {
+    discount = "Free";
+  } else if (ageOfPerson >= 6 && ageOfPerson <= 17) {
+    discount = "Child discount";
+  } else if (ageOfPerson >= 18 && ageOfPerson <= 26) {
+    discount = "Student discount";
+  } else if (ageOfPerson >= 27 && ageOfPerson <= 66) {
+    discount = "Full price";
+  } else {
+    discount = "Senior citizen discount";
+  }
+  return [discount, ageOfPerson];
+}
+
+console.log(calculateDiscount(ageOfPerson));
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let largeCountries = ["Russia", "USA", "Japan", "India", "China"];
+
+// use the for loop to log out the countries in the array
+
+for (let i = 0; i < largeCountries.length; i++) {
+  console.log(largeCountries[i]);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let largeCountriesNew = ["Russia", "USA", "Japan", "India", "China"];
+
+// use push, pop, unshift  and shift
+console.log(largeCountries);
+largeCountries.push("Australia");
+console.log(largeCountries);
+largeCountries.pop();
+console.log(largeCountries);
+largeCountries.unshift("Canada");
+console.log(largeCountries);
+largeCountries.shift();
+console.log(largeCountries);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// If it is Friday the 13th , log out this spooky face:😟
+// use the logical; "AND operator (&&)"
+
+let dateOfMonth = 13;
+let weekday = "Friday";
+if (dateOfMonth && weekday == "Friday") {
+  console.log("😟");
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// create a function that return a random item for the array
+
+let hands = ["rock", "paper", "scissors"];
+
+function randomHand() {
+  let randomIndex = Math.floor(Math.random() * hands.length);
+  return hands[randomIndex];
+}
+
+console.log(randomHand());
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
