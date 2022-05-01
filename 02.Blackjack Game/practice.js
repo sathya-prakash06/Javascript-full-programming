@@ -69,3 +69,10 @@ let course = {
 
 console.log(course["title"]); // by using [] we can access the value of the key
 console.log(course.title); // by using dot notation we can access the value of the key
+
+let user = {
+  name: "John",
+  sayHello: () => {
+    console.log("Hello");
+  },
+};
