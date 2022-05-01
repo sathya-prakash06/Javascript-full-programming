@@ -6,6 +6,8 @@
 let firstCard = Math.floor(Math.random() * 11) + 2;
 let secondCard = Math.floor(Math.random() * 11) + 2;
 // console.log(firstCard, secondCard);
+
+let cards = [firstCard, secondCard];
 let hasBlackjack = false;
 let isAlive = true;
 let message = "";
@@ -19,8 +21,19 @@ let messageEl = document.getElementById("message-el"); // getElementById method
 let sumEl = document.querySelector("#sum-el"); // querySelector is a method
 let cardEl = document.querySelector("#card-el");
 
+const startGame = () => {
+  renderGame();
+};
+
+const newGame = () => {
+  let newCard = Math.floor(Math.random() * 11) + 2;
+
+  sum += newCard;
+  renderGame();
+};
+
 const renderGame = () => {
-  cardEl.textContent = "Cards: " + firstCard + " & " + secondCard;
+  cardEl.textContent = "Cards: " + cards[0] + " & " + cards[1];
   sumEl.textContent = "Sum is: " + sum;
   if (sum <= 21) {
     message = "Do you want to draw a card?!";
@@ -33,13 +46,6 @@ const renderGame = () => {
     isAlive = false;
   }
   messageEl.textContent = message;
-};
-
-const newGame = () => {
-  let newCard = Math.floor(Math.random() * 11) + 2;
-
-  sum +=   newCard;
-  renderGame();
 };
 
 // console.log("hasBlackjack", hasBlackjack);
@@ -58,3 +64,31 @@ if (age >= 21) {
 } else {
   console.log("You can't play the game");
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let hasCompletedCourse = true;
+let givesCertificate = true;
+
+if (hasCompletedCourse && givesCertificate) {
+  // true && true = true
+  console.log("You can graduate");
+} else {
+  console.log("You can't graduate");
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Arrays - ordered lists of items
+
+let arr = [
+  "Checkout my Netflix clone", // 0
+  "Here's the code  for my project", // 1
+  "'I've just relaunched my portfolio", // 2
+];
+
+console.log(arr[0]);
+console.log(arr.length);
+
+arr.push("newElement"); // to add new element to the end of the array
+console.log(arr.length);
+
+arr.pop() // to remove the last element of the array
+console.log(arr.length);
