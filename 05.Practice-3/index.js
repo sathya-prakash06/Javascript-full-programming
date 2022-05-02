@@ -10,5 +10,37 @@ console.log(email);
 const emailTemplate = `Hey ${recipient}! how it going ?`;
 console.log(emailTemplate);
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const welcomeEl = document.querySelector("#welcome-el");
+
+function greetUser(name, emoji) {
+  welcomeEl.textContent = `Welcome to the site,  ${name}  ${emoji}`;
+}
+greetUser("James", "😍");
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// create a function , add(a,b) , that returns the sum of a and b
+
+console.log(addTwoNumbers(1, 2)); // 3
+
+function addTwoNumbers(a, b) { // parameters
+  return a + b;
+}
+
+console.log(addTwoNumbers(87, 1)); // 88  // arguments
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// create a function , getFirst(arr) , that returns the first element of an array
+
+function getFirst(arr){
+    return arr[0];
+}
+
+let arr = [1,2,3,4,5];
+
+console.log(getFirst(arr)); // 1
