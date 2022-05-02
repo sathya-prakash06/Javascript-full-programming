@@ -6,9 +6,11 @@ const ulEl = document.getElementById("ul-el");
 const dltBtn = document.getElementById("dlt-btn");
 
 //localStorage.setItem('myLead', 'www.google.com');
-let myLead = JSON.parse(localStorage.getItem("myLeads"));
+let myLead = [];
+let leadsLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
-if (myLead) {
+if (leadsLocalStorage) {
+  myLead = leadsLocalStorage
   renderLeads();
 }
 
@@ -40,7 +42,7 @@ function renderLeads() {
 
 dltBtn.addEventListener("click", function () {
   //console.log('clicked')
-  localStorage.removeItem("myLeads");
+  localStorage.clear();
   myLead = [];
   renderLeads();
 });
