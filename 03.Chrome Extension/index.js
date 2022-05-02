@@ -17,7 +17,7 @@ function renderLeads() {
   for (let i = 0; i < myLead.length; i++) {
     listItems += `
     <li>
-    <a target='_blank' href= '${myLead[i]}' >${myLead[i]}</a>
+    <a target='_blank' href= 'https://${myLead[i]}' >${myLead[i]}</a>
     </li>`;
     console.log(myLead[i]);
     // console.log(listItems);
